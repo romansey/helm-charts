@@ -25,6 +25,7 @@ spec:
       targetPort: 4141
       protocol: TCP
       name: atlantis
+      appProtocol: http
   selector:
     app: {{ template "atlantis.name" . }}
     release: {{ .Release.Name }}
